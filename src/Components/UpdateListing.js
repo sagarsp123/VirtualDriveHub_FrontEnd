@@ -27,7 +27,7 @@ export default function UpdateListing() {
   useEffect(() => {
     const fetchCarById = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/listings/select/${vehicle_id}`);
+        const res = await axios.get(`https://adt-node-mysql-api.onrender.com/listings/select/${vehicle_id}`);
         console.log('API Response:', res);
 
         if (res.data.length > 0) {
@@ -60,7 +60,7 @@ export default function UpdateListing() {
 
     try {
       // Make a PUT request to update the listing
-      const res = await axios.put(`http://localhost:8800/listings/${vehicle_id}`, {
+      const res = await axios.put(`https://adt-node-mysql-api.onrender.com/listings/${vehicle_id}`, {
         MakerName: listing.MakerName,
         model: listing.model,
         trim: listing.trim,
