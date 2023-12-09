@@ -106,7 +106,7 @@ if (data.length > 0 && data[0]) {
   const handleDelete = async () => {
     try {
       // Make a DELETE request using axios
-      await axios.delete(`http://localhost:8800/listings/${vehicle_id}`);
+      await axios.delete(`https://adt-node-mysql-api.onrender.com/listings/${vehicle_id}`);
       window.alert('Records have been deleted!');
       navigate("/marketplace")
       
