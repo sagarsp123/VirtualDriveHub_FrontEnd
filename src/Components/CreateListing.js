@@ -54,7 +54,7 @@ export default function CreateListing() {
 
         console.log(updatedFormData)
 
-        const res = await axios.post('http://localhost:8800/listings', updatedFormData);
+        const res = await axios.post('https://adt-node-mysql-api.onrender.com/listings', updatedFormData);
         console.log(res.data); // Log the response from the server
 
         window.alert('Records have been created!');
