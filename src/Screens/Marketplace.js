@@ -110,7 +110,7 @@ export default function Marketplace() {
 
     const fetchAllCars = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/listings");
+        const res = await axios.get("https://adt-node-mysql-api.onrender.com/listings");
         setData(res.data);
         createFilters(res.data); 
         setLoading(false);
