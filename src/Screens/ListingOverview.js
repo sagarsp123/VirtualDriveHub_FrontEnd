@@ -63,7 +63,7 @@ export default function ListingOverview() {
 
     const fetchAllCars = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/listings/select/${vehicle_id}`);
+        const res = await axios.get(`https://adt-node-mysql-api.onrender.com/listings/select/${vehicle_id}`);
         console.log('API Response:', res);
         setData(res.data);
         setLoading(false);
