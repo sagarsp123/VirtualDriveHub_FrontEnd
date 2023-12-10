@@ -7,6 +7,7 @@ import CreateListing from './Components/CreateListing';
 import NotFound from './Screens/NotFound';
 import ListingOverview from './Screens/ListingOverview';
 import UpdateListing from './Components/UpdateListing';
+import Visuals from './Screens/Visuals';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/marketplace" element={<Marketplace/>} />
-      <Route path="/maps" element={<h1>Maps</h1>} />
+      <Route path="/visuals" element={<Visuals/>} />
       <Route path='/listing/:id' element={<ListingOverview/>}/>
       <Route path='/listing/create' element={<CreateListing/>}/>
       <Route path='/listing/update/:id' element={<UpdateListing/>}/>
