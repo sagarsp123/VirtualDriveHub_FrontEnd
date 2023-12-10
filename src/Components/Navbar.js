@@ -16,8 +16,8 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import { Link } from 'react-router-dom';
 
 const listingMenu = [
-  // { name: 'Delete Listing', description: 'Sad to see you go :(', href: '/', icon: TrashIcon },
-  // // { name: 'Update Listing', description: 'Need to update the existing listing? Click here', href: '/listing/update', icon: CursorArrowRaysIcon },
+  { name: 'Delete Listing', description: 'Sad to see you go :(', href: '/', icon: TrashIcon },
+  { name: 'Update Listing', description: 'Need to update the existing listing? Click here', href: '/listing/update', icon: CursorArrowRaysIcon },
   { name: 'Create Listing', description: 'Add a new listing for your car!!', href: '/listing/create', icon: PlusIcon },
   
 ]
@@ -54,12 +54,13 @@ export default function Navbar() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           
-        {/* <Link to="/maps" className="text-sm font-semibold leading-6 text-gray-900">
-            Map View
-        </Link>           */}
+                
           <Link to="/marketplace" className="text-sm font-semibold leading-6 text-gray-900">
             Marketplace
           </Link>
+          <Link to="/visuals" className="text-sm font-semibold leading-6 text-gray-900">
+            Visuals View
+        </Link>  
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
               More
@@ -168,15 +169,22 @@ export default function Navbar() {
                     </>
                   )}
                 </Disclosure>
-                <Link to="/map" className="text-sm font-semibold leading-6 text-gray-900">
-            Map View
+                <Link to="/visuals" className="text-sm font-semibold leading-6 text-gray-900">
+            Visuals View
         </Link>
           
-          <Link to="/marketplace" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/cars" className="text-sm font-semibold leading-6 text-gray-900">
             Marketplace
           </Link>
               </div>
-              
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </div>
             </div>
           </div>
         </Dialog.Panel>
