@@ -144,7 +144,7 @@ export default function Navbar() {
             Visuals View
         </Link>
           
-          <Link to="/cars" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/marketplace" className="text-sm font-semibold leading-6 text-gray-900">
             Marketplace
           </Link>
               </div>
