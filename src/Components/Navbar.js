@@ -16,15 +16,9 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import { Link } from 'react-router-dom';
 
 const listingMenu = [
-  { name: 'Delete Listing', description: 'Sad to see you go :(', href: '/', icon: TrashIcon },
-  { name: 'Update Listing', description: 'Need to update the existing listing? Click here', href: '/listing/update', icon: CursorArrowRaysIcon },
   { name: 'Create Listing', description: 'Add a new listing for your car!!', href: '/listing/create', icon: PlusIcon },
-  
 ]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -96,18 +90,6 @@ export default function Navbar() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
-                      <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
               </Popover.Panel>
             </Transition>
           </Popover>
@@ -154,18 +136,7 @@ export default function Navbar() {
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...listingMenu, ...callsToAction].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
+                      
                     </>
                   )}
                 </Disclosure>
